@@ -4,20 +4,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>curso Vue</title>
+	
+	
 </head>
 <body>
 <h1>Escuela de vue js</h1>
+<h2>Introduccion</h2>
 <h2>Aplicacion Usando Javascript</h2>
 <div id="app">
-	<form action="">
+	<form action="" v-on:submit.preven="guardarTarea">
 		<label for="texto"></label>
-		<input type="text" name="texto">
+		<input v-model="nuevaTarea" type="text" name="texto">
 		<input type="submit" name="" value="guardar">
 	</form>
 	
 </div>
 <hr>
-<h3>texto escrito con JS puro</h3>
+<h3>Aplicacion con JS puro</h3>
 
 <h4>Lista de lenguajes</h4>
 
@@ -28,10 +31,9 @@
 <hr>
 
 
-
-
-
 	<script type="text/javascript">
+  
+		
 		//aplicacion vanilla JS
 		const formulario= document.querySelector("form");
 		const ul =document.querySelector("ul");
@@ -48,7 +50,12 @@
 			input.value =null;
 			
 			console.log(tareas);
-		}
+		} 
+		
+
+		
+
+		
 
 	</script>
 </body>
