@@ -7,5 +7,49 @@
 </head>
 <body>
 <h1>Escuela de vue js</h1>
+<h2>Aplicacion Usando Javascript</h2>
+<div id="app">
+	<form action="">
+		<label for="texto"></label>
+		<input type="text" name="texto">
+		<input type="submit" name="" value="guardar">
+	</form>
+	
+</div>
+<hr>
+<h3>texto escrito con JS puro</h3>
+
+<h4>Lista de lenguajes</h4>
+
+<ul>
+
+</ul>
+
+<hr>
+
+
+
+
+
+	<script type="text/javascript">
+		//aplicacion vanilla JS
+		const formulario= document.querySelector("form");
+		const ul =document.querySelector("ul");
+		const input=document.querySelector("input[type='text']");
+		const tareas=[];
+
+		formulario.onsubmit = evento => {
+			evento.preventDefault();
+			tareas.push(input.value); 
+
+			let li =document.createElement("li");
+			li.textContent = input.value;
+			ul.appendChild(li);
+			input.value =null;
+			
+			console.log(tareas);
+		}
+
+	</script>
 </body>
 </html>
